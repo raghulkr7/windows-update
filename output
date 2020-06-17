@@ -1,0 +1,18 @@
+Windows PowerShell
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Try the new cross-platform PowerShell https://aka.ms/pscore6
+
+PS C:\Users\RAGHUL> $UpdateSession = New-Object -ComObject Microsoft.Update.Session
+PS C:\Users\RAGHUL> $UpdateSearcher = $UpdateSession.CreateupdateSearcher()
+PS C:\Users\RAGHUL> $Updates = @($UpdateSearcher.Search("IsHidden=0 and IsInstalled=0").Updates)
+PS C:\Users\RAGHUL> $Updates | Select-Object Title
+
+Title
+-----
+2020-01 Update for Windows 10 Version 1909 for x64-based Systems (KB4497165)
+Update for Microsoft Defender Antivirus antimalware platform - KB4052623 (Version 4.18.2005.5)
+Security Intelligence Update for Microsoft Defender Antivirus - KB2267602 (Version 1.317.1547.0)
+
+
+PS C:\Users\RAGHUL>
